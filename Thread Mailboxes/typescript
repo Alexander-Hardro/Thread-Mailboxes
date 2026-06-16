@@ -1,0 +1,38 @@
+Script started on 2026-02-18 20:29:53-05:00 [TERM="xterm-256color" TTY="/dev/pts/16" COLUMNS="77" LINES="15"]
+]0;ahardro@ccc-app-p-u31:~/OperatingSystems/Project3[?2004h[ahardro@ccc-app-p-u31 Project3]$ make clean
+[?2004lrm -f *.o mailbox
+]0;ahardro@ccc-app-p-u31:~/OperatingSystems/Project3[?2004h[ahardro@ccc-app-p-u31 Project3]$ make
+[?2004lg++ -pthread -Wall -c main.cpp
+g++ -pthread -Wall -c mailbox.cpp
+g++ -pthread -Wall -c adder.cpp
+g++ -pthread -Wall -o mailbox main.o mailbox.o adder.o
+]0;ahardro@ccc-app-p-u31:~/OperatingSystems/Project3[?2004h[ahardro@ccc-app-p-u31 Project3]$ ./mailbox 3
+[?2004l3 1
+4 2
+6 1
+5 1
+7 3
+9 2
+3 -1
+Invalid input skipped
+-1 2
+Invalid input skipped
+eof
+The result from thread 3 is 7 from 1 operations during 11 seconds.
+The result from thread 1 is 14 from 3 operations during 21 seconds.
+The result from thread 2 is 13 from 2 operations during 20 seconds.
+]0;ahardro@ccc-app-p-u31:~/OperatingSystems/Project3[?2004h[ahardro@ccc-app-p-u31 Project3]$ ./mailbox 3 nb
+[?2004l3 1
+4 2
+6 1
+5 1
+7 3
+9 2
+eof
+The result from thread 1 is 14 from 3 operations during 12 seconds.
+The result from thread 3 is 7 from 1 operations during 4 seconds.
+The result from thread 2 is 13 from 2 operations during 11 seconds.
+]0;ahardro@ccc-app-p-u31:~/OperatingSystems/Project3[?2004h[ahardro@ccc-app-p-u31 Project3]$ exit
+[?2004lexit
+
+Script done on 2026-02-18 20:31:42-05:00 [COMMAND_EXIT_CODE="0"]
